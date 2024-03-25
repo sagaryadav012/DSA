@@ -21,7 +21,7 @@ public class UniqPaths2_LC63 {
         System.out.println(paths2(grid, 0, 0, m, n, dp));
         System.out.println(uniquePathsWithObstacles(grid));
     }
-    // Recursive Code : TC - O(2^n) SC - O(R+C)
+    // Recursive Code : TC - O(2^R+C) SC - O(R+C)
     public static int paths1(int[][] grid, int row, int col, int m, int n){
         if(row == m || col == n || grid[row][col] == 1) return 0;
         if(row == m-1 && col == n-1) return 1;
