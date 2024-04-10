@@ -1,4 +1,4 @@
-package Queue;
+package QueueAndStacks;
 
 public class StudentsUnableToEat_LC1700 {
     public static void main(String[] args) {
