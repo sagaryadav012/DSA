@@ -1,4 +1,4 @@
-package QueueAndStacks;
+package QueueAndStacks.MonotonicStack;
 
 public class SumOfSubArrayMins_LC907 {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class SumOfSubArrayMins_LC907 {
         System.out.println(sumSubarrayMins1(arr));
         System.out.println(sumSubarrayMins2(arr));
     }
-    public static int sumSubarrayMins1(int[] arr) {
+    public static int sumSubarrayMins1(int[] arr) { // TC -O(N^2) SC -O(1)
         int n = arr.length;
         int mod = 1000000009;
         long sum = 0;
@@ -20,7 +20,7 @@ public class SumOfSubArrayMins_LC907 {
         }
         return (int)sum%mod;
     }
-    public static int sumSubarrayMins2(int[] arr) {
+    public static int sumSubarrayMins2(int[] arr) { // TC -O(N) SC -O(N)
         int n = arr.length;
         int mod = 1000000007;
         int[] leftMin = new int[n];

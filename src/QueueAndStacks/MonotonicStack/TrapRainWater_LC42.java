@@ -1,4 +1,4 @@
-package QueueAndStacks;
+package QueueAndStacks.MonotonicStack;
 
 public class TrapRainWater_LC42 {
     public static void main(String[] args) {

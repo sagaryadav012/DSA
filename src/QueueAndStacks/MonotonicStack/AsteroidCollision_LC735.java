@@ -1,4 +1,4 @@
-package QueueAndStacks;
+package QueueAndStacks.MonotonicStack;
 
 import java.util.Arrays;
 import java.util.Stack;
