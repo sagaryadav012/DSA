@@ -33,7 +33,9 @@ public class BestTimeToBuyAndSellStock1 {
     }
 }
 /*
--> We have to find maxProfit. choose some to buy and some day to sell so that we have to get max profit.
+
+-> We have to find maxProfit. choose some day to buy and some day to sell so that we have to get max profit.
+-> It's about make only one transaction but should get max profit.
 
 Approach 1 :
 -> Take two pointer(i,j). Here i is the buy price and j is sell price. in order to get profit we have to sell at higher price i.e. greater than buy price.
@@ -46,5 +48,6 @@ Approach 2 :
 -> So buy at some price and sell at price > buy_price, store profit. Now keep on iterating over prices,
    If we encounter price < buy_price, then move buy_price pointer to here and check for, sell price again.
 -> TC - O(N) SC - O(1)
+
 
  */
