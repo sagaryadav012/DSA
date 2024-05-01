@@ -40,11 +40,11 @@ public class MinInRotatedSortedArray_LC153 {
 /*
 Approach 1 :
 -> If array is sorted and not rotated we can easily find min.
--> If array is sorted, one half is sorted and another half would not be sorted.
+-> If array is rotated, one half is sorted and another half would not be sorted.
 -> Min value lies in unsorted array or it could be mid of array.
    Ex : 4,5,6,7,0,1,2 in this min lies in unsorted array, 4,5,1,2,3 here min is mid.
 -> One thing sure that we can eliminate sorted array, if array is not rotated, eliminate right search space.
--> How can we know array is rotated or not, when two halfs are sorted it's not rotated.
+-> How can we know array is rotated or not, when two halves are sorted it's not rotated.
 -> So, first check array is rotated or not, if yes eliminate second half -> right = mid;
 -> else first half is sorted, eliminate first half -> left = mid+1
 -> else if we reach here it means second half is sorted so min lies in left half, so eliminate right half -> right = mid
@@ -58,6 +58,17 @@ Approach 2 :
 -> else if we reach here that means right half is sorted. if left half is not sorted min lies here,
    even left half sorted, that means left and right half sorted means array not rotated, so check
    in first half also.
+
+Approach 3 :
+-> Find which half is sorted, once find sorted half take min of it and move to other half.
+-> So at every step take min(min, first value of sorted half).
+
+Three possible cases :
+case 1 : 0,1,2,3,4,5 here array is sorted so just do right = mid-1
+case 2 : 4,5,6,7,0,1,2,3 here array is rotated so check which half is sorted, 4 to 7 sorted so take min
+         and move to right half.
+case 3 : 6,0,1,2,3,4,5 here array is rotated, second half is sorted so take min and move to first half.
+
 
  Test cases :
  4,5,6,7,0,1,2

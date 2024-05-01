@@ -43,12 +43,14 @@ public class SearchInSortedArray2_LC81 {
 
 /*
 -> It's almost same as Search in rotated sorted array without duplicates. but in this we have duplicates.
--> So, above approach will not work. we don't have duplicated we easily find which half is sorted.
--> If we have duplicates it's not possible to find which half is sorted.
+-> So, above approach will not work. If array doesn't have duplicates it's easy to find which half is sorted.
+-> If array has duplicates it's not possible to find which half is sorted.
    Ex : 3   0   3   3   3   3   3
    Here left, mid and right of nums is same that is 3.
-   Do we know which one is sorted and how to eliminate other half? it's not possible, when we get into
+   Is it possible to find which half is sorted and find where target lies? it's not possible, when we get into
    this scenario just reduce search space left++ and right--. now again do BS.
+-> If left == mid and mid != right or left != mid and mid == right, In this case it is possible which half is sorted but
+   only when left == mid == right in this case it is not possible.
 -> Why do we not use while loop while(nums[left] == nums[mid] && nums[mid] == nums[right]),
    Dry run this nums = {1} target = 0;
 

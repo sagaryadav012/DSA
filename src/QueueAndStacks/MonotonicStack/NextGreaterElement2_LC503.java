@@ -53,4 +53,5 @@ public class NextGreaterElement2_LC503 {
 -> Find and store greater of n-2 to 0, so that when find greater it will not go to i-1
 -> Take stack and store next greater of each num from n-2 to 0.
 -> Once we find those, now iterate from n-1 to 0 to find all greater.
+-> One thing is that, greater of ith index could be lies between 0 to i-1. so we have to find greater of previous indexes.
  */
