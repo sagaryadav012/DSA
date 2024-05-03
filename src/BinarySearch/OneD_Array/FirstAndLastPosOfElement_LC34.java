@@ -16,7 +16,7 @@ public class FirstAndLastPosOfElement_LC34 {
 
         while(left <= right) {
             int mid  = left + (right-left)/2;
-            if(nums[mid] == target && (mid ==0 || nums[mid-1] != target)) {
+            if(nums[mid] == target && (mid == 0 || nums[mid-1] != target)) {
                 start = mid;
                 while(mid<n && nums[mid] == target) {
                     end = mid;
