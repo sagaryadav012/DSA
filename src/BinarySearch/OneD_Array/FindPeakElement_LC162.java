@@ -51,4 +51,6 @@ public class FindPeakElement_LC162 {
 
     4. nums[i] can be nums[i-1] > nums[i] < nums[i+1] in this case we can move any side, we get max if move
        to any side.
+
+-> Remember Array is no need to be sorted.
  */
