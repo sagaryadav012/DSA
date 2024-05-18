@@ -44,4 +44,9 @@ why we need to sort on 1 index : Run this [0,9], [0,6], [7,12]
    diameters.
 -> initially take arrows = 1, because for last consecutive overlapped diameter we won't increment arrows so take
    it first only.
+-> To know how many balloons can burst with one arrow, then check how many balloons are started before end of the current balloon.
+   For example, we stand at balloons whose diameter is 0 to 6, now check how many balloons start point <= 6(overlapped),
+   then all those balloons can burst with single arrow. so sort diameters on end point.
+-> Take First balloon diameter, now check how many balloons start point < end of first balloon, and burst them with
+   one arrow.
  */
