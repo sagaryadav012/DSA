@@ -5,7 +5,7 @@ public class DetectCycleInDirectedGraph_DFS {
         int[][] adjList = {
                 {1,3},
                 {2},
-                {3  },
+                {3},
                 {}
         };
         System.out.println(isCycle(adjList));
