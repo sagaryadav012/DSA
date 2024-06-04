@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class LongestCommonSubsequence_LC1143 {
     public static void main(String[] args) {
-        String text1 = "abcba";
-        String text2 = "abcbcba";
+        String text1 = "abcxyzaxybadgadu";
+        String text2 = "abbaxysaduwza";
         int n = text1.length();
         int m = text2.length();
 //        System.out.println(longestCommonSubsequence1(text1, text2, n-1, m-1));
@@ -17,7 +17,7 @@ public class LongestCommonSubsequence_LC1143 {
 
 //        System.out.println(longestCommonSubsequence2(text1, text2, n-1, m-1, dp));
         System.out.println(longestCommonSubsequence3(text1, text2));
-        System.out.println(longestCommonSubsequence4(text1, text2));
+//        System.out.println(longestCommonSubsequence4(text1, text2)); // Solution is not working
     }
 
     // TC - O(2^N) SC - O(N + stack space)

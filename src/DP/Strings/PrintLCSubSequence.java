@@ -2,8 +2,8 @@ package DP.Strings;
 
 public class PrintLCSubSequence {
     public static void main(String[] args) {
-        String text1 = "abcab";
-        String text2 = "cbab";
+        String text1 = "abcxyzaxybadgadu";
+        String text2 = "abbaxysaduwza";
         System.out.println(printString(text1, text2));
     }
     public static String printString(String text1, String text2) {
@@ -21,11 +21,11 @@ public class PrintLCSubSequence {
             }
         }
 
-        String ans = "";
+        StringBuilder sb = new StringBuilder();
         int i = n, j = m;
         while(i > 0 && j > 0){
             if(text1.charAt(i-1) == text2.charAt(j-1)){
-                ans += text1.charAt(i-1);
+                sb.append(text1.charAt(i-1));
                 i -= 1;
                 j -= 1;
             }
@@ -36,9 +36,6 @@ public class PrintLCSubSequence {
                 j = j-1;
             }
         }
-        return new StringBuilder(ans).reverse().toString();
+        return sb.reverse().toString();
     }
 }
-/*
-Re work on it, solution is not working.
- */

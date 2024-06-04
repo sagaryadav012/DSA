@@ -81,3 +81,15 @@ public class LIS_LC300 {
         return list.size();
     }
 }
+
+
+/*
+-> Take dp array to store the maxLen till that current Index.
+-> Take two loops, outer loop iterates over array to forward direction, inner loop iterates to backward direction
+   to count how many are lesser values. if(nums[j] < nums[i]) then dp[i] = Math.max(dp[i], dp[j]+1).
+-> Initially all values are 1, since min maxLen is 1 only.
+
+To print LIS :
+-> Keep track of index, means which index has maxLen and keep track of prevIndex of every index.
+-> To clarify, check Largest Divisible Subset Problem
+ */

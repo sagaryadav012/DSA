@@ -78,3 +78,15 @@ public class MeetingRooms2_LC253 {
         return maxRooms;
     }
 }
+/*
+Approach 1 :
+-> First sort all meetings on start time, so it's easy to check which meeting overlapping in linear time complexity.
+-> Pick meetings one by one and assign rooms for it. Before assign room check, Is there any meeting ended?
+   If any meeting ended, then we can use that room to current meeting.
+-> So we need a data structure to find this, I assume priority queue is better to check last ended meeting
+   at constant time. add meetings to queue, sort meetings on end time. so peek value will be the soon ended meeting.
+-> So add one by one to queue, check before adding Is there any meeting ended? IF yes poll it from queue,
+   add current meeting.
+-> Here no.of meeting rooms are size of queue.
+-> TC - O(NlogN) SC - O(n)
+ */

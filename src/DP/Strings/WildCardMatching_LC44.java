@@ -90,7 +90,7 @@ public class WildCardMatching_LC44 {
 }
 /*
 
--> There could 3 cases :
+-> There could be 3 cases :
 -> Case 1 : both chars are equal, so check remaining portion of s and p. f(i-1, j-1).
 -> Case 2 : char of p can be ?, so it matches with one character. so check remaining portion of s and p. f(i-1, j-1).
 -> Case 3 : char of p can be *, * can be match with empty or 1 or more characters. so here two possibilities,

@@ -32,3 +32,13 @@ public class LinkedListCycle_LC142 {
         return slow;
     }
 }
+/*
+-> Assume there are two runners slower and faster, If they meet at some point in path that cycle in it, then
+   If we assume slower runner covers x+y and faster runner covers x+2y+z then
+   2*slower = faster
+   2(x+y) = x + 2y+ z
+   2x + 2y = x + 2y + z
+   x = z
+   So start two runners, one is at start point, second is at meet point, then move them equally, where they meet then
+   that is cycle start point.
+ */

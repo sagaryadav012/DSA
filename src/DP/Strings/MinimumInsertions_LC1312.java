@@ -45,9 +45,9 @@ public class MinimumInsertions_LC1312 {
    EX : abcaa
    Longest palindrome subsequence = aaa
    Now aaa is the longest palindrome, bc left so insert bc to make palindrome.
-   -> abcaabca, now is it palindrome, answer is no.
+   -> abcabca, is it palindrome now? answer is no.
    -> insert reverse of bc at suitable place to make palindrome.
-   -> abcaacba, now it is palindrome.
+   -> abcacba, now it is palindrome.
 -> Why do we need to find the longest palindrome subsequence, because we need min insertions, so find the longest
    palindrome subsequence and insert remaining chars to make palindrome.
 

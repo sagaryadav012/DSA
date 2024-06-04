@@ -14,24 +14,25 @@ public class NumberOfLIS_LC673 {
 
        int maxLen = 0;
 
-       for(int i = 0; i < n; i++){
-           // initially each num is LIS len 1 and count of LIS len of 1 is 1.
-           dp[i] = 1;
-           count[i] = 1;
-           for(int j = 0; j < n; j++){
-               if(nums[i] > nums[j] && dp[j]+1 > dp[i]){
-                   // if prev num smaller than curr num then take LIS len and since we added num to it take count of prev num
-                   dp[i] = dp[j] + 1;
-                   count[i] = count[j];
-               }
-               else if(nums[i] > nums[j] && dp[j]+1 == dp[i]){
-                   count[i] += count[j];
-               }
-           }
-           if(maxLen < dp[i]){
-               maxLen = dp[i];
-           }
-       }
+        for(int i = 0; i < n; i++){
+            dp[i] = 1;
+            count[i] = 1;
+            for(int j = i-1; j >= 0; j--){
+                if(nums[i] > nums[j]){
+                    if(dp[j]+1 > dp[i]){
+                        dp[i] = dp[j] + 1;
+                        count[i] = count[j];
+                    }
+                    else if(dp[j]+1 == dp[i]){
+                        count[i] += count[j];
+                    }
+                }
+
+            }
+            if(maxLen < dp[i]){
+                maxLen = dp[i];
+            }
+        }
         System.out.println(Arrays.toString(dp));
         System.out.println(Arrays.toString(count));
        // Once we know LIS len, then count how many no.of LIS are there with len = maxLen

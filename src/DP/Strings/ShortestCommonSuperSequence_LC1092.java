@@ -72,7 +72,7 @@ public class ShortestCommonSuperSequence_LC1092 {
 -> Generate string :
     -> first put pointer to n-1,m-1
     -> if(s1[i-1] == s2[j-1]) then add char to ans string.
-    -> else move to max((i-1),j), i,(j-1)) and add char to which one is min of both.
+    -> else move to max((i-1),j), i,(j-1)) and add char of which one is min of both.
     -> that means when chars are not equal we move to max LCS, and left min LCS so add min LCS to string.
 
 TestCases :

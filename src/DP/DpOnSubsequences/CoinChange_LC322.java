@@ -36,7 +36,7 @@ public class CoinChange_LC322 {
 
     // TC - 2^n SC - O(n)
     public static int coinChange1(int index, int amount, int[] coins){
-        if(index < 0) return 13; // since max coin len = 12
+        if(index < 0) return amount+1;
         if(amount == 0) return 0;
 
         int dontTake = coinChange1(index - 1, amount, coins);
@@ -49,7 +49,7 @@ public class CoinChange_LC322 {
 
     // TC - (N * amount) SC - O(n * amount)
     public static int coinChange2(int index, int amount, int[] coins, int[][] dp){
-        if(index < 0) return 13; // since max coin len = 12
+        if(index < 0) return amount+1;
         if(amount == 0) return 0;
 
         if(dp[index][amount] != -1) return dp[index][amount];

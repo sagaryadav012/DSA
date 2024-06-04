@@ -15,7 +15,7 @@ public class MinBursts_LC452 {
         System.out.println(findMinArrowShots(points));
     }
     public static int findMinArrowShots(int[][] points) {
-        Arrays.sort(points, (a, b) -> a[0] < b[0] ? -1 : a[0] == b[0] ? 0 : 1);
+        Arrays.sort(points, (a, b) -> a[1] < b[1] ? -1 : a[1] == b[1] ? 0 : 1);
         int n = points.length;
 
         int diameterEnd = points[0][1];

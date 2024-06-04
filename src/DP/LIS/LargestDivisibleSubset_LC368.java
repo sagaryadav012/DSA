@@ -57,7 +57,7 @@ Approach 2:
 -> Take example nums = {8,7,2,16,1}
 -> To check num satisfies condition, we have to iterate over array and check nums[i] % nums[j] == 0 or nums[j] % nums[i] == 0.
 -> Sort array -> 1,2,7,8,16
--> Now it is similar to LIS, We don't need to check all nums to check condition, for example 8 is divisible 1,2.
+-> Now it is similar to LIS, We don't need to check all nums to check condition, for example 8 is divisible by 1,2.
    if we add 16, we don't need to check from starting just check 16 is divisible 8 or not. If 16%8 == 0 then
    16 divisible by 1,2 also. That's why sort array and one condition is enough to check nums[i] % nums[j] == 0.
 -> TC - O(N^2) SC - O(N)
