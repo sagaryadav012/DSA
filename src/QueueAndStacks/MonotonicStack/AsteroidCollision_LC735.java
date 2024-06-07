@@ -17,18 +17,15 @@ public class AsteroidCollision_LC735 {
                 continue;
             }
 
-            while(!stack.isEmpty() && stack.peek() > 0 &&  stack.peek() < Math.abs(asteroid)){
+            while(!stack.isEmpty() && stack.peek() > 0 &&  stack.peek() < -asteroid){
                 stack.pop();
-            }
-
-            if(!stack.isEmpty() && stack.peek() > 0 && stack.peek() == Math.abs(asteroid)){
-                stack.pop();
-                continue;
             }
 
             if(stack.isEmpty() || stack.peek() < 0){
                 stack.push(asteroid);
             }
+
+            if(stack.peek() == -asteroid) stack.pop();
         }
 
         int n = stack.size();
@@ -42,3 +39,18 @@ public class AsteroidCollision_LC735 {
         return res;
     }
 }
+/*
+-> Iterate over asteroids, when get +ve asteroid or stack empty push asteroid to stack.
+-> Second case when asteroid is -ve, colloid all asteroids that are < abs(currSize), when while loop executes
+   it colloids all +ve asteroids which are smaller than current -ve asteroid. while loops stops in following
+   4 cases.
+   case 1 : All are collided and stack empty.
+   case 2 : When we get equal size +ve asteroid.
+   case 3 : When we get -ve asteroid.
+   case 4 : Greater +ve asteroid.
+
+   In case1, We add current -ve asteroid to stack.
+   In case2, We pop peek and don't current asteroid also. since both are collided.
+   In case3, Just add current asteroid to stack.
+   In case4, current asteroid collided so don't add to stack.
+ */

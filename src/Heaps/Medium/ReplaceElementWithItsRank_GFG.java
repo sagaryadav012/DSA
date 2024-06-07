@@ -38,17 +38,17 @@ public class ReplaceElementWithItsRank_GFG {
 
         int[] res = new int[n];
         int lastVal = -1;
-        int rank = 0;
+        int rank = 1;
         while(!pq.isEmpty()){
            int[] pair = pq.poll();
            int val = pair[0];
            int index = pair[1];
            if(lastVal == val){
-              res[index] = rank;
+              res[index] = rank-1;
               continue;
            }
-           res[index] = rank + 1;
-           rank = res[index];
+           res[index] = rank;
+           rank++;
            lastVal = val;
         }
         return res;

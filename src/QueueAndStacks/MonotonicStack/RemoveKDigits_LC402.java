@@ -39,7 +39,9 @@ public class RemoveKDigits_LC402 {
 /*
 -> We have to remove k digits from num to make num as min as possible.
 -> Which digit if we remove so that num could be smaller? If num is 10^6, we remove left most digit then it become 10^5.
--> For example num is 894 remove one digit to become num as min as possible, we know that remove left most so it become small but
+-> For example num is 894 remove one digit to become num as min as possible, we know that remove left most, so it become small but
    if remove 8, num is 94 but possible ans is 84. So traverse from right and remove k greater values.
 -> Use stack to remove k greater nums of current num.
+-> First remove left greater values, If still k is > 0 then remove values from right, since they will be in ascending order.
+
  */

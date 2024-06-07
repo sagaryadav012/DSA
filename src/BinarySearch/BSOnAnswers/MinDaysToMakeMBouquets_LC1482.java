@@ -9,7 +9,7 @@ public class MinDaysToMakeMBouquets_LC1482 {
         System.out.println(minDays2(bloomDay, m, k));
         System.out.println(isPossible(m, k, bloomDay, 12));
     }
-    public static int minDays1(int[] bloomDay, int m, int k) {
+    public static int minDays1(int[] bloomDay, int m, int k) { // TC - O(N*N)
         int n = bloomDay.length;
         if(n < m*k) return -1;
 
@@ -45,10 +45,8 @@ public class MinDaysToMakeMBouquets_LC1482 {
         int adjacent = 0;
         int madeBouquets = 0;
 
-        for (int day : bloomDay) {
-            int ans = day - currentDay;
-
-            if (ans <= 0) adjacent += 1;
+        for (int day : bloomDay){
+            if (currentDay - day >= 0) adjacent += 1;
             else adjacent = 0;
 
             if (adjacent == k) {
@@ -61,7 +59,7 @@ public class MinDaysToMakeMBouquets_LC1482 {
         }
         return madeBouquets == m;
     }
-    public static int minDays2(int[] bloomDay, int m, int k) {
+    public static int minDays2(int[] bloomDay, int m, int k) { // TC - O(NlogN)
         int n = bloomDay.length;
         if(n < m*k) return -1;
 
