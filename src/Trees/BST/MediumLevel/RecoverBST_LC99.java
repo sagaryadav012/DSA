@@ -7,32 +7,6 @@ import java.util.Map;
 
 public class RecoverBST_LC99 {
     public static void main(String[] args) {
-        String A = "cadbecbda";
-        int B = 2;
-        System.out.println(solve(A, B));
-    }
-    public static int solve(String A, int B) {
-        if(B == 0) return 0;
-        Map<Character, Integer> map = new HashMap<>();
-        int n = A.length();
-        int i = 0, j = 0;
-        int ans = 0;
-        while(j < n){
-            char c = A.charAt(j);
-            map.put(c, map.getOrDefault(c, 0) + 1);
-            int size = map.size();
-            if(size <= B){
-                ans = Math.max(ans, j-i+1);
-                j++;
-                continue;
-            }
-            char delChar = A.charAt(i);
-            int freq = map.get(delChar);
-            if(freq == 1) map.remove(delChar);
-            else map.put(delChar, freq-1);
-            i++;
-        }
-        return ans;
     }
     TreeNode pNode = new TreeNode(Integer.MIN_VALUE);
     TreeNode fNode = null;
@@ -66,6 +40,7 @@ Approach 1 :
 Approach 2 :
 -> Do inorder traversal and store values in list. Sort list.
 -> Iterate over list, check prev value < curr val, if not store values. Swap at last.
+-> Construct BST from list after swap.
 
 Approach 3 :
 -> There are two cases to check.

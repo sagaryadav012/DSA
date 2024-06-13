@@ -35,7 +35,7 @@ public class LongestRepeatingCharacterReplacement_LC424 {
    Replace A with other chars(X,Y,Z) XXXYZ max substring which has only one char is length 3;
    If we change chars except maxFreq, we get max window. AAAAZ here len is 4.
 -> So take two pointer, move right pointer to right and check the window is valid.
-   Window is valid when only length - maxFreq <= k. That means if k = 2 length is 5, and maxFreq = 3
+   Window is valid when only window length - maxFreq <= k. That means if k = 2 length is 5, and maxFreq = 3
    then there is one char repeated 3 times and two other chars so change two chars to maxFreq char so that
    window of substring has same chars and it's valid.
  */

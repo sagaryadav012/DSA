@@ -33,9 +33,9 @@ case 1 : If deleteNode is leaf then simply return null to parent.
 case 2 : If deleteNode has only left child, then attach left to parent of deleteNode.
 case 3 : If deleteNode has only right child, then attach right to parent of deleteNode.
 case 4: If deleteNode has both left and right child, then we need to delete this node
-        and place appropriate node this place so that It doesn't violate BST.
+        and place appropriate node at this place so that It doesn't violate BST.
         How can we do that?
         Find predecessor of deleteNode and place here, that doesn't violate BST.
         So find predecessor, swap curr node value with predecessor value and delete predecessor,
-        Now the problem boils down to deleteNode again but this it is delete leafNode.
+        Now the problem boiled down to deleteNode again but this time it is leafNode.
  */

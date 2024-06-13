@@ -86,4 +86,14 @@ Approach 3 :
     next element is 1 then odd count will increase, so make sub arrays count = 0.
 
     Dry run this example nums {1,2,2,1,1,2} k = 2
+
+Approach 4 :
+-> Take prefix odd array of given array, Now the problem boils down to sub array sum equal to k.
+   For example  nums {4,1,3,8,7,6,3,7} k = 2
+   nums                 4       1       3       8       7       6       3       7
+   Prefix odd array ->  0       1       2       2       3       3       4       5
+
+   First store key-0, value 1 in map since when we encounter 2 means sub array has odd numbers the count will be 1.
+   Iterate over array, check x - k exists in map, if yes result += freq of(x-k). store new val freq.
+-> TC - O(N) SC - O(N)
  */
