@@ -78,7 +78,7 @@ Test Cases :
   dp[r-1][c-1 ] gives occurrence of sum 2(subSet2)
 
  -> if we observe we have to find s1 - s2 = target here s2 = 2 that means s1 = 5 then only we get target as 3
- -> if you check occurrence of s1 is also same as the occurrence of s2.
+ -> if you check occurrence of s1 is same as the occurrence of s2.
  -> 5 - 2 = 3 -> ways = occurrence of (5 or 2) using given nums of values
 
  edge cases s2 = (totalSum - target)/2

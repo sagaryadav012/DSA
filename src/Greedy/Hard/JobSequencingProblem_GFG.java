@@ -58,7 +58,7 @@ Approach 1 :
            job          time        maxProfit
                         0           0
            1,2,100      1           100
-           3,1,50       currently we are time slot2, but this job time is 1 so expired.
+           3,1,50       currently we are at time slot2, but this job time is 1 so expired.
            2,2,30       2           100+30 = 130
            It gives maxProfit 130, but we can do jod id 3 at time 1 and job id 1 at 2, so we get 150.
 -> so the above approach fails.

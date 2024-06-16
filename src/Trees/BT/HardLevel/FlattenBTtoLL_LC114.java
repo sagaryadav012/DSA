@@ -23,6 +23,6 @@ Approach 1 :
 -> TC - O(N) SC - O(N)
 
 Approach 2 :
--> Follow reverse post order traversal, Right Left Root.
+-> Follow reverse pre order traversal, Right Left Root.
 -> TC - O(N) SC - O(H)
  */

@@ -36,7 +36,7 @@ public class NumberOfOperationToMakeNetworkConnected_LC1319 {
    we can use those edges to connect components.
 -> What is an extra edge here? If we remove an edge from graph then the graph still connected to all nodes
    in that particular component.
--> So find extra edges first, then If  we have sufficient extra edge then we can connect all connected components.
+-> So find extra edges first, If  we have sufficient extra edge then we can connect all connected components.
 -> If there are n connected components then we need n-1 edges to connect all components.
 -> To find extra edges, use DSU it helps to find extra edges. Here extra edges are edges that forms cycle in graph.
    DSU helps to find an edges forms cycle or not, If it forms cycle then count += 1;

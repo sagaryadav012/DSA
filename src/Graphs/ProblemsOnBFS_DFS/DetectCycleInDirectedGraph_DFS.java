@@ -44,12 +44,12 @@ public class DetectCycleInDirectedGraph_DFS {
 
 Approach 1 : DFS
 -> It is not possible to detect cycle in Directed graph with help of only visited array.
-    1------->2   1 -> 2, 1 -> 3, 2 -> 4, 3 -> 4 dry run this to know why visited array is enough to check cycle.
+    1------->2   1 -> 2, 1 -> 3, 2 -> 4, 3 -> 4 dry run this to know why visited array is not enough to check cycle.
     |        |
     |        |
     3-------->4
 
 -> Cycle means the node has been visited again in the same path.
--> Track the path of dfs traversal, if path visited again then check that node is in the same path, if yes
-   then there is a cycle in it.
+-> Track the path of dfs traversal, if node visited again then check the path of node, if it's true that means it visited
+   node again in same path, then there is a cycle in it.
  */
