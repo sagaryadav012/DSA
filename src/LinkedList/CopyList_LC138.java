@@ -38,7 +38,8 @@ public class CopyList_LC138 {
         curr = head;
         // Connect random pointer of new LL with help of Original LL
         while(curr != null){
-            curr.next.random = curr.random.next;
+            if(curr.random != null)
+                curr.next.random = curr.random.next;
             curr = curr.next.next;
         }
 

@@ -2,8 +2,8 @@ package BinarySearch.OneD_Array;
 
 public class SearchInSortedArray1_LC33 {
     public static void main(String[] args) {
-        int[] nums = {4,5,6,7,0,1,2};
-        int target = 0;
+        int[] nums = {3,4,1,2};
+        int target = 5;
         System.out.println(search(nums, target));
         System.out.println(search1(nums, target));
     }
@@ -82,5 +82,20 @@ Approach 2 :
 Dry run :
  -> array : 4,5,6,7,0,1,2 and target 0
  -> array : 6,0,1,2,3,4,5 and target 0
+ -> array : 5,1,3 and target 5;
+
+ Is this code is not enough ?
+       while(left <= right){
+            int mid = left + (right - left)/2;
+            if(nums[mid] == target) return mid;
+
+            if(nums[left] <= nums[mid] && nums[left] <= target && target <= nums[mid]){
+                right = mid - 1;
+            }
+            else left = mid + 1;
+        }
+The above code fails, where we are checking array is sorted if yes check target exists, if exist we eliminate other half.
+Ok above point is correct, if array is not sorted then move other half but the target exist in current not sorted half.
+So here we need sorted to check only target exist.
 
  */

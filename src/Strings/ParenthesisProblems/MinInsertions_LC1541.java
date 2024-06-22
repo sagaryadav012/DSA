@@ -1,4 +1,4 @@
-package QueueAndStacks.LeetCodeMSC;
+package Strings.ParenthesisProblems;
 
 public class MinInsertions_LC1541 {
     public static void main(String[] args) {
