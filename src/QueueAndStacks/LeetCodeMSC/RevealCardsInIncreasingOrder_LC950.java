@@ -1,4 +1,4 @@
-package QueueAndStacks;
+package QueueAndStacks.LeetCodeMSC;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
