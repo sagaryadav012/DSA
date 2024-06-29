@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class NextPermutation_LC31 {
     public static void main(String[] args) {
-        int[] nums = {4,3,2,5,4,3,1};
+        int[] nums = {5,3,6,4,2,1};
         nextPermutation(nums);
         System.out.println(Arrays.toString(nums));
     }
@@ -38,3 +38,15 @@ public class NextPermutation_LC31 {
         }
     }
 }
+/*
+-> Check increasing subArray from last, that means we covered big value, so there is no next permutation for it.
+-> Now find greater value than current value from last. Swap those and sort.
+
+ Ex : 5,3,6,4,2,1
+    Here increasing sub array from right to left is 6,4,2,1 there is no next permutation for it.
+    We covered all permutations starts with 3, last permutation is 3,6,4,2,1. so after 3, next available
+    greater value is 4, so now permutations starts with 4. So swap those values.
+
+    5,4,6,3,2,1 -> now reverse sub array from 6 to 1 -> 5,4,1,2,3,6
+    Next permutation of 5,3,6,4,2,1 is 5,4,1,2,3,6.
+ */
