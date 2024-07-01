@@ -45,7 +45,7 @@ Approach 1 :
    Ex : 4,5,6,7,0,1,2 in this min lies in unsorted array, 4,5,1,2,3 here min is mid.
 -> One thing sure that we can eliminate sorted array, if array is not rotated, eliminate right search space.
 -> How can we know array is rotated or not, when two halves are sorted it's not rotated.
--> So, first check array is rotated or not, if yes eliminate second half -> right = mid;
+-> So, first check array is sorted or not, if yes eliminate second half -> right = mid;
 -> else first half is sorted, eliminate first half -> left = mid+1
 -> else if we reach here it means second half is sorted so min lies in left half, so eliminate right half -> right = mid
 -> Why right = mid - 1 ? min could be mid of nums so need to check it. Dry run 3,1,2

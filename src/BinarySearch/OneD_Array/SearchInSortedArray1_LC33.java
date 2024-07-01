@@ -96,6 +96,6 @@ Dry run :
         }
 The above code fails, where we are checking array is sorted if yes check target exists, if exist we eliminate other half.
 Ok above point is correct, if array is not sorted then move other half but the target exist in current not sorted half.
-So here we need sorted to check only target exist.
+So here we need sorted half to check only target exist.
 
  */

@@ -70,18 +70,19 @@ Approach 2 :
 -> We know that each row is sorted, by iterating through first col we get smaller value in matrix,
    By iterating through last col we get larger value in matrix.
 -> Now we know least and bigger values in matrix, So median lies between smaller and larger.
--> Observed that no.of elements in matrix are always odd, odd/2 is median.
--> For example 15 is no.of values in matrix, then 15/2 = 7 is median,
-   that means there will be 6 values to left of median and 6 values to right of median.
+-> Observed that no.of elements in matrix are always odd, odd/2 + 1 is median.
+-> For example 15 is no.of values in matrix, then 15/2 = 8 is median,
+   that means there will be 7 values to left of median and 7 values to right of median.
 -> We know smaller and larger, take mid and check how many no.of values less than mid, if mid lies exact mid position
    then that could be the ans;
 -> For Example :
         1   5   7   9   11
         2   3   4   5   10
         9   10  12  14  16
-
+   Here Smaller value is 1 and larger value is 16. So median lies between 1 and 16.
    Here total no.of elements are 3*5 = 15 so left to median are 7, right to median are 7.
-   Smaller val = 1 and larger val = 16, median lies between them.
+   Now take any number between 1 and 16, for example I take 14 and check How many numbers are less than 14,
+   If 14 have to be median then no.of smaller values should be 7.
 
    Number from 1 to 16      :           1    2   3   4   5   6   7   8   9   10  11  12  13  14  15  16
    No.of smaller values to curr Num :   1    2   3   4   6   6   7   7   9   11  12  13  13  14  14  15
