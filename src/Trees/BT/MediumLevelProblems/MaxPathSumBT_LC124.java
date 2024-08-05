@@ -1,6 +1,6 @@
 package Trees.BT.MediumLevelProblems;
 
-import Trees.TreeNode;
+import Trees.LeetCodeMSC.TreeNode;
 
 public class MaxPathSumBT_LC124 {
     int maxSumm = Integer.MIN_VALUE;

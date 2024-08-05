@@ -1,6 +1,6 @@
 package Trees.BT.HardLevel;
 
-import Trees.TreeNode;
+import Trees.LeetCodeMSC.TreeNode;
 
 public class LCAofBT_LC236 {
     public static void main(String[] args) {

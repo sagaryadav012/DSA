@@ -1,4 +1,4 @@
-package Strings;
+package Strings.LeetCodeProblems;
 
 import java.util.Arrays;
 

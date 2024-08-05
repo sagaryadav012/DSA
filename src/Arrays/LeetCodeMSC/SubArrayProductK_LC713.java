@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.LeetCodeMSC;
 
 public class SubArrayProductK_LC713 {
     public static void main(String[] args) {

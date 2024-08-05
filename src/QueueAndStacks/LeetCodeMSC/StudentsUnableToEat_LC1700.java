@@ -37,7 +37,7 @@ Output: 3
         sandwich[3]     now no one is there to eat 0 shape sandwich so return how many are left.
 -> First count of students who will eat 0 and 1 sandwiches
 -> Iterate over sandwiches, and decrement count of students who will current sandwich.
--> If no one is left return remaining students count;
+-> If no one is left to eat current sandwich then return remaining students count;
 
 For the best explanation watch this : https://www.youtube.com/watch?v=AGNg0nXRw2k
  */

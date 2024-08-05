@@ -1,6 +1,6 @@
 package Trees.BT.MediumLevelProblems;
 
-import Trees.TreeNode;
+import Trees.LeetCodeMSC.TreeNode;
 
 public class DistributeCoinsInBT_LC979 {
     public static void main(String[] args) {

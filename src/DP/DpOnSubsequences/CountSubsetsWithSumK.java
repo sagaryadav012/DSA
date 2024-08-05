@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class CountSubsetsWithSumK {
     public static void main(String[] args) {
-        int[] nums = {1,1,1,2,2};
-        int tar = 2;
+        int[] nums = {9, 7, 0, 3, 9, 8, 6, 5, 7, 6};
+        int tar = 31;
         System.out.println(findWays(nums, tar));
         System.out.println(ways3(nums, tar));
     }

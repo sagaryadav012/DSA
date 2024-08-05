@@ -1,6 +1,6 @@
 package Trees.BT.MediumLevelProblems;
 
-import Trees.TreeNode;
+import Trees.LeetCodeMSC.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

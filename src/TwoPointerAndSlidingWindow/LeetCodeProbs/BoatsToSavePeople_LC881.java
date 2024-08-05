@@ -51,4 +51,14 @@ Approach 1 :
     so take j only.
 
 -> TC - O(NlogN) SC - O(1)
+
+-> Why can't we choose people in linear way ? Dry run this 1,2,3,4,5 limit 5
+
+   people       boatCount
+   1+2             1
+   3               1
+   4               1
+   5               1
+   Total 4 boats have taken. But 3 is enough. 5, 1+4, 2+3
+
  */

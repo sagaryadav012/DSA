@@ -1,6 +1,6 @@
 package Trees.BT.HardLevel;
 
-import Trees.TreeNode;
+import Trees.LeetCodeMSC.TreeNode;
 
 import java.util.*;
 

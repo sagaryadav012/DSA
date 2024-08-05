@@ -1,6 +1,6 @@
 package Trees.BT.MediumLevelProblems;
 
-import Trees.TreeNode;
+import Trees.LeetCodeMSC.TreeNode;
 
 public class SymmetricTree_LC101 {
     public boolean isSymmetric(TreeNode root) {

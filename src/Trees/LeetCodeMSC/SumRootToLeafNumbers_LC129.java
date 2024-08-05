@@ -1,7 +1,4 @@
-package Trees;
-
-import java.util.ArrayList;
-import java.util.List;
+package Trees.LeetCodeMSC;
 
 public class SumRootToLeafNumbers_LC129 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.LeetCodeMSC;
 
 import java.util.HashMap;
 import java.util.HashSet;

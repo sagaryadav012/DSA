@@ -1,6 +1,6 @@
 package Trees.BT.Traversals;
 
-import Trees.TreeNode;
+import Trees.LeetCodeMSC.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

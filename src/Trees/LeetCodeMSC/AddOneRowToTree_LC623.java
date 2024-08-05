@@ -1,4 +1,4 @@
-package Trees;
+package Trees.LeetCodeMSC;
 
 import java.util.LinkedList;
 import java.util.Queue;

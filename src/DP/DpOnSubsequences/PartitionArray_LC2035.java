@@ -32,7 +32,7 @@ public class PartitionArray_LC2035 {
             currDp[0] = 1;
             for(int j = 1; j <= sum; j++){
                 int dontTake = prevDp[j];
-                if(nums[i-1] <= j){
+                    if(nums[i-1] <= j){
                     int take = prevDp[j - nums[i-1]];
                     dontTake |= take;
                 }

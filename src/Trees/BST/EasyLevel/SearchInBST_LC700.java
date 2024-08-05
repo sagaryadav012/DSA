@@ -1,6 +1,6 @@
 package Trees.BST.EasyLevel;
 
-import Trees.TreeNode;
+import Trees.LeetCodeMSC.TreeNode;
 
 public class SearchInBST_LC700 {
     public TreeNode searchBST(TreeNode root, int val) { // TC - O(H) SC - O(H)

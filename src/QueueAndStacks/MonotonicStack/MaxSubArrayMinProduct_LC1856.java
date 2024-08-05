@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MaxSubArrayMinProduct_LC1856 {
     public static void main(String[] args) {
-        int[] nums = {1009897,1009898,1009899};
+        int[] nums = {1,2,3,2};
         System.out.println(maxSumMinProduct(nums));
     }
     public static int maxSumMinProduct(int[] nums) { // TC - O(N) SC - O(N)
@@ -16,23 +16,20 @@ public class MaxSubArrayMinProduct_LC1856 {
         System.out.println(Arrays.toString(LM));
         System.out.println(Arrays.toString(RM));
 
-        long[] pSum = new long[n];
-        pSum[0] = nums[0];
-
-        for(int i = 1; i < n; i++){
-            pSum[i] = (pSum[i-1] + nums[i])%mod;
+        long[] pSum = new long[n + 1];
+        for (int i = 0; i < n; i++) {
+            pSum[i + 1] = pSum[i] + nums[i];
         }
 
         long maxMinProduct = 0;
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             int leftMin = LM[i];
             int rightMin = RM[i];
-            long sum = leftMin == -1 ? pSum[rightMin - 1] : pSum[rightMin-1] - pSum[leftMin];
+            long sum = pSum[rightMin] - pSum[leftMin + 1];
             sum = sum * nums[i];
             maxMinProduct = Math.max(maxMinProduct, sum);
-//            maxMinProduct = maxMinProduct%mod;
         }
-        return (int)(maxMinProduct % mod);
+        return (int) (maxMinProduct % mod);
     }
     public static int[] leftMin(int[] nums, int n){
         int[] LM = new int[n];

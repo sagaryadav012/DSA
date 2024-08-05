@@ -38,4 +38,6 @@ public class LongestRepeatingCharacterReplacement_LC424 {
    Window is valid when only window length - maxFreq <= k. That means if k = 2 length is 5, and maxFreq = 3
    then there is one char repeated 3 times and two other chars so change two chars to maxFreq char so that
    window of substring has same chars and it's valid.
+-> Why shouldn't we update maxFreq again when move left pointer ? There is no point in downgrading maxFreq
+   Since we don't get maxLen.
  */

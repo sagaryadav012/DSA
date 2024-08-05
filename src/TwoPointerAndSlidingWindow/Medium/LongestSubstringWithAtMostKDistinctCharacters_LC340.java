@@ -31,3 +31,7 @@ public class LongestSubstringWithAtMostKDistinctCharacters_LC340 {
         return maxLen;
     }
 }
+/*
+Question : Given a string, find the length of the longest substring T that contains at most k distinct characters.
+
+ */

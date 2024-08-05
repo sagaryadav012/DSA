@@ -1,6 +1,6 @@
 package Strings.Medium;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class SortCharsByFreq_LC451 {
     public static void main(String[] args) {
@@ -52,6 +52,29 @@ public class SortCharsByFreq_LC451 {
                 freq--;
             }
             index++;
+        }
+        return sb.toString();
+    }
+    public String frequencySort2(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        for(char c : s.toCharArray()){
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+
+        List<Pair> pairs = new ArrayList<>();
+        for(Map.Entry<Character, Integer> entry : map.entrySet()){
+            pairs.add(new Pair(entry.getKey(), entry.getValue()));
+        }
+
+        Collections.sort(pairs, (p1, p2) -> p2.freq - p1.freq);
+        StringBuilder sb = new StringBuilder();
+        for(Pair pair : pairs){
+            int freq = pair.freq;
+            char c = pair.c;
+            while(freq > 0){
+                sb.append(c);
+                freq--;
+            }
         }
         return sb.toString();
     }

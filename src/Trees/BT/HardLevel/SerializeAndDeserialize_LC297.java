@@ -1,7 +1,7 @@
 package Trees.BT.HardLevel;
 
 import Trees.BT.Traversals.LevelOrderTraversal;
-import Trees.TreeNode;
+import Trees.LeetCodeMSC.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

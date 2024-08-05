@@ -31,3 +31,13 @@ public class NonOverlappingIntervals_LC435 {
         return count;
     }
 }
+
+/*
+-> Why do we need to sort on end time?
+   Let's see example {[1,50], [1,10], [11, 20], [21,30]} these intervals sorted on start time.
+   Here interval 1,50 covered all other intervals. When we check [1,50] with other intervals, they overlap.
+   So we increment count, instead of removing all other, remove bigger interval, To remove it sort intervals
+   on end time. [1,10], [1,50], [11, 20], [21,30].
+   [1,10], [1,50] are overlapping so remove second one and count += 1, except those non overlapping.
+   So here min intervals to remove count is 1.
+ */

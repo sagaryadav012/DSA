@@ -7,23 +7,23 @@ public class TrapRainWater_LC42 {
     }
     public static int trap(int[] height) {
         int n = height.length;
-        int[] pmax = new int[n];
-        int[] smax = new int[n];
-        pmax[0] = height[0];
-        smax[n - 1] = height[n - 1];
+        int[] leftMax = new int[n];
+        int[] rightMax = new int[n];
+        leftMax[0] = height[0];
+        rightMax[n - 1] = height[n - 1];
 
         for (int i = 1; i < n; i++) {
-            if (height[i] > pmax[i - 1]) pmax[i] = height[i];
-            else pmax[i] = pmax[i - 1];
+            if (height[i] > leftMax[i - 1]) leftMax[i] = height[i];
+            else leftMax[i] = leftMax[i - 1];
         }
         for (int i = n - 2; i >= 0; i--) {
-            if (height[i] > smax[i + 1]) smax[i] = height[i];
-            else smax[i] = smax[i + 1];
+            if (height[i] > rightMax[i + 1]) rightMax[i] = height[i];
+            else rightMax[i] = rightMax[i + 1];
         }
 
         int ans = 0;
         for (int i = 1; i < n - 1; i++) {
-            int min = Math.min(pmax[i - 1], smax[i + 1]);
+            int min = Math.min(leftMax[i - 1], rightMax[i + 1]);
             int water = min - height[i];
             if (water > 0) ans += water;
         }

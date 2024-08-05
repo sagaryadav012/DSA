@@ -1,8 +1,4 @@
-package Trees;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+package Trees.LeetCodeMSC;
 
 public class SmallestStringStartingFromLeaf_LC988 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Greedy.Medium;
+package Strings.ParenthesisProblems;
 
 import java.util.Stack;
 
@@ -67,4 +67,11 @@ public class ValidParenthesisString_LC678 {
     If we get stars before and opens later like **(( or *( it is not valid so check last, If we still have
     opens, check are there any stars available It yes, check their position. So when we store ( or * store their
     indexes.
+
+
+TestCases :
+-> (*(*(*
+-> (((**(**
+-> *((**
+-> ***(((
  */

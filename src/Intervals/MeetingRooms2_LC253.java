@@ -79,6 +79,10 @@ public class MeetingRooms2_LC253 {
     }
 }
 /*
+
+Question : Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei),
+           find the minimum number of conference rooms required.
+
 Approach 1 :
 -> First sort all meetings on start time, so it's easy to check which meeting overlapping in linear time complexity.
 -> Pick meetings one by one and assign rooms for it. Before assign room check, Is there any meeting ended?

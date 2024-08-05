@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.LeetCodeMSC;
 
 public class CountSubArrays_LC2962 {
     public static void main(String[] args) {

@@ -91,5 +91,9 @@ public class LIS_LC300 {
 
 To print LIS :
 -> Keep track of index, means which index has maxLen and keep track of prevIndex of every index.
+-> Why do we keep track of prevIndex ? can't we choose smaller LIS of current LIS ?
+   For Example  LIS - > 1 2 3 2 3 4 1
+   We choose at num at LIS 4, next LIS 3, next 2 and next 1. If in case LIS would be like
+   1 2 1 4 -> choose 4, 1 and ended but actual one 1,2,4 so keep track of prev Index at which LIS increased.
 -> To clarify, check Largest Divisible Subset Problem
  */

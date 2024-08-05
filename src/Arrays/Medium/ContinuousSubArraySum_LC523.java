@@ -47,7 +47,7 @@ Approach 3 :
 -> Mod value ranges from 0 to k-1 so if we find 0 that means their exist a multiple of k. so store 0
    in map initially.
 -> When we encounter same mod then check size of sub array also.
--> TC - O(N) SC - O(1)
+-> TC - O(N) SC - O(N)
 
 Test Cases :
 [23,2,4,6,7], k = 6

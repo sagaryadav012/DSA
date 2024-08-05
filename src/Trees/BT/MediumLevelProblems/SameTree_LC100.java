@@ -1,6 +1,6 @@
 package Trees.BT.MediumLevelProblems;
 
-import Trees.TreeNode;
+import Trees.LeetCodeMSC.TreeNode;
 
 public class SameTree_LC100 {
     public boolean isSameTree(TreeNode p, TreeNode q) {

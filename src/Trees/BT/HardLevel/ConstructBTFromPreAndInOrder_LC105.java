@@ -1,7 +1,7 @@
 package Trees.BT.HardLevel;
 
 import Trees.BT.Traversals.PreOrderTraversal;
-import Trees.TreeNode;
+import Trees.LeetCodeMSC.TreeNode;
 
 import java.util.HashMap;
 

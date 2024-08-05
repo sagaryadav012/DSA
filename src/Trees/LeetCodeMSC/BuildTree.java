@@ -1,6 +1,4 @@
-package Trees;
-
-import java.util.List;
+package Trees.LeetCodeMSC;
 
 public class BuildTree {
     public static void main(String[] args) {
