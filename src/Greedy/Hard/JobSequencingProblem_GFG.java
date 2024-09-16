@@ -14,7 +14,7 @@ public class JobSequencingProblem_GFG {
         };
         int n = 4;
         System.out.println(Arrays.toString(JobScheduling(jobs, n)));
-        System.out.println(-5%5);
+//        System.out.println(-5%5);
     }
     public static int[] JobScheduling(Job arr[], int n) {
         Arrays.sort(arr, (j1, j2) -> j2.profit - j1.profit);

@@ -1,8 +1,6 @@
 package Strings.Easy;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class IsomorphicString_LC205 {
     public static void main(String[] args) {

@@ -45,7 +45,7 @@ public class TargetSum_LC494 {
 }
 /*
 -> This problem is same as Striver DP - 18. No.of ways to form |s1 - s2| = D
--> Here we need to + and - to nums so that total = diff.
+-> Here we need to add + and - to nums so that total = diff.
 -> Divide array into two subsets s1(+ve nums), s2(-ve nums) so that |s1 - s2| = target.
 
 step 1 -> count sum of all nums.

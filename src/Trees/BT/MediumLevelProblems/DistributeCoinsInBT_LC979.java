@@ -27,4 +27,12 @@ public class DistributeCoinsInBT_LC979 {
    (3-2-2)-1(Here -1 represents root node need one coin so remove one coin from total) = -2 coins needed so return it to its parent.
 -> And the final task is to find moves. If child return -ve or +ve value except 0 that means move is happening
    there so take abs value of left and right then take moves += left + right
+
+-> Here every parent gets coin count from its children, The count would be no.of coins children need or no.of coins children have extra.
+   Once parent get count, it sums coins of left, right and parent's coins and remove 1 coin from total count,
+   that coin is for parent. parent will return extra count to their parent.
+-> Moves will be absolute value of left and right coins count. for example left child return 2 coins to parent
+   that means left child have extra 2 coins, so we are moving two coins that take single step, but we moved 2 coins
+   so 2 * 1step = 2 steps or moves. even count is -ve that means we need to give coins so it will be also a move.
+
  */

@@ -2,12 +2,12 @@ package LinkedList;
 
 import java.util.HashMap;
 
-public class LRUCache {
+public class LRUCache_146 {
     int capacity;
     HashMap<Integer, DListNode> map;
     DListNode head;
     DListNode tail;
-    public LRUCache(int capacity) {
+    public LRUCache_146(int capacity) {
         this.capacity = capacity;
         map = new HashMap<>();
         head = new DListNode(-1,-2);

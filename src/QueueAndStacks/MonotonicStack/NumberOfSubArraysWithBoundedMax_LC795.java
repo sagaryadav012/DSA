@@ -88,6 +88,11 @@ Approach 3 :
    means it gives boundaries of that values which acts as max, so now we know no.of sub arrays in
    which the values acts as max and this max lies in between left right. So take count.
 -> TC - O(N) SC - O(N+N)
+   or
+-> Take total sub arrays count = n(n+1)/2
+-> Iterate over array, check value out of left and right range, if yes calculate in how many sub arrays
+   this value act as max, take count and remove it from total count.
+-> TC - O(N) SC - O(N+N)
 
 Approach 4 :
 -> Use two pointer technique.

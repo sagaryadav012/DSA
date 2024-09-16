@@ -15,7 +15,7 @@ public class MinInRotatedSortedArray_LC153 {
             if(nums[left] <= nums[mid] && nums[mid] <= nums[right]){
                 right = mid; // it means array is not rotated, mid-1 works here
             }
-            else if(nums[left] <= nums[mid]){
+            else if(nums[left] <= nums[mid]){ // If above condition failed means array is rotated, then first half values are greater
                 left = mid + 1;
             }
             else{

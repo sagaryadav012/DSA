@@ -1,4 +1,4 @@
-package BitManipulation;
+package BitManipulation.Medium;
 
 public class ScoreAfterFlippingMatrix_LC861 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package BitManipulation;
+package BitManipulation.Medium;
 
 public class MinNumberOfOperations_LC2997 {
     public static void main(String[] args) {

@@ -56,4 +56,7 @@ The meetings are - (1, 2),(3, 4), (5,7) and (8,9)
 -> Sort on start time and sort on short time period will not work, instead do sort on end time.
 -> If we hold meeting which ends first then we can hold other also.
 
+Sort on start time will not work -> Ex : (1,10) (2,4) (5,7) (8,9).
+Sort on short time intervals will not work : (5,6) (2,4) (4,6)
+
  */

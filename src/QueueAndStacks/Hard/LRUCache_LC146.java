@@ -78,3 +78,17 @@ class ListNode{
         next = null;
     }
 }
+/*
+Explanation :
+-> Get and Put operation can be done easily with map. map stores key(integer) and value(integer).
+-> But here problem is, when cache is full, need to evict least recently used key, It can't be done using map.
+   Since map doesn't store insertion order. We should insertion order then only we can detect least recently used key.
+-> To detect LRU key, We have used doubly ended linked list, In this removal and adding is easy, and will
+   be done at constant time.
+-> So map stores integer, integer. DLL stores key. When we do get operation, we will get value from map at
+   Constant time as well we need to remove key at present location and add it at end of DLL.
+-> But the problem is here, we can't find key at constant time in DLL, in order find key, need to do linear search.
+-> So in map store key and values is DLL node, so that it is easy to find node at constant time.
+-> In order to get value, store value in DLL Node, DLL node stores key, value, prev pointer and next pointer.
+
+ */

@@ -11,7 +11,7 @@ public class SearchIn2DMatrix_LC74 {
         System.out.println(searchMatrix1(matrix,target));
         System.out.println(searchMatrix2(matrix, target));
     }
-    public static boolean searchMatrix1(int[][] matrix, int target) {
+    public static boolean searchMatrix1(int[][] matrix, int target) { // TC - O(n+m)
         int m = matrix.length;
         int n = matrix[0].length;
 
@@ -27,7 +27,7 @@ public class SearchIn2DMatrix_LC74 {
 
         return false;
     }
-    public static boolean searchMatrix2(int[][] matrix, int target) {
+    public static boolean searchMatrix2(int[][] matrix, int target) { // TC - O(log(n*m))
         int m = matrix.length;
         int n = matrix[0].length;
 

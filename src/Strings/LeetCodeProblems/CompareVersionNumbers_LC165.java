@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class CompareVersionNumbers_LC165 {
     public static void main(String[] args) {
-        String version1 = "1.01";
-        String version2 = "1.0.0";
+        String version1 = "1.2";
+        String version2 = "1.10";
         System.out.println(compareVersion(version1, version2));
     }
     public static int compareVersion(String version1, String version2) {

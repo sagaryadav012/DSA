@@ -43,3 +43,14 @@ public class CapacityOfShip_LC1011 {
         return dayCount <= days;
     }
 }
+/*
+-> We need to find the least weight capacity.
+-> Let's take this example {1,2,3,4,5,6,7,8,9,10} days = 5. Max no.of days boat takes to ship packages?
+   If boat ships one package per day it takes 10 days(array size). Then what is min weight capacity?
+   Min weight capacity here is 10(max weight) then only boat can ship all packages(each one per day).
+-> If boat ships all package in single, then min weight capacity of ship will be sum of all weights of packages.
+-> We know boat takes one to arraySize days and capacity of boat can be 10 to 55. Answer will be in between 10 to 55.
+-> So do binary search on this range(10 - 55) and check how many days it is taking to ship,
+   if days <= days then weight would be possible weight.
+
+ */

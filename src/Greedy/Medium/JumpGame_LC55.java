@@ -29,4 +29,20 @@ public class JumpGame_LC55 {
         }
         return dp[n-1];
     }
+    public boolean canJump3(int[] nums) {
+        int n = nums.length;
+        int last = n - 1;
+        for(int i = n - 2; i >= 0; i--)  {
+            if(i + nums[i] >= last) last = i;
+        }
+        return last == 0;
+    }
 }
+
+/*
+Approach 3 :
+-> We have to check weather can reach last index.
+-> So take to pointers(i and last), one(last) of it points to last index and other one(i) traverse from n-2 to 0.
+-> Now take jumps at index i and check can reach index at last. If we can reach then change last point to i, means
+   can reach from i to last so check remaining jumps to reach i, if we reach we can reach last also.
+ */

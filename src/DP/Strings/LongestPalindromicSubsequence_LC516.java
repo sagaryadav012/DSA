@@ -2,7 +2,7 @@ package DP.Strings;
 
 import java.util.Arrays;
 
-public class LongestPalindromicSubsequence {
+public class LongestPalindromicSubsequence_LC516 {
     public static void main(String[] args) {
         String str = "abxybayx";
         System.out.println(longestPalindromeSubseq(str));
