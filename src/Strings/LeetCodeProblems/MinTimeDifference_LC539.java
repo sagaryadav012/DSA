@@ -1,7 +1,6 @@
 package Strings.LeetCodeProblems;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class MinTimeDifference_LC539 {

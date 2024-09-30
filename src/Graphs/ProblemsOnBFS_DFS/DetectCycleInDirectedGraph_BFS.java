@@ -41,8 +41,8 @@ public class DetectCycleInDirectedGraph_BFS {
     }
 }
 /*
--> Detect cycle in graph using BFS is possible only with topo sort technique.
--> Topo sort is not possible in cyclic graph.
+-> Detect cycle in graph using BFS is possible only with topological sort technique.
+-> Topological sort is not possible in cyclic graph.
 -> Count incoming edges of each node, process nodes which have 0 incoming edges and decrease the edge count of
    neighbour nodes. If they 0 count add to queue and process it.
 -> If there is a cycle in graph then any of node incoming edge count will be 1.

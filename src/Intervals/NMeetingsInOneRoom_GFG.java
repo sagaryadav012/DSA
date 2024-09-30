@@ -1,12 +1,13 @@
 package Intervals;
 
+import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class NMeetingsInOneRoom_GFG {
     public static void main(String[] args) {
 
     }
-    public static int maxMeetings(int start[], int end[], int n) {
+    public static int maxMeetings1(int start[], int end[], int n) {
         // add your code here
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
 
@@ -24,6 +25,27 @@ public class NMeetingsInOneRoom_GFG {
             if(endTime >= meetingStartTime) continue;
 
             endTime = meetingEndTime;
+            meetingsCount += 1;
+        }
+        return meetingsCount;
+    }
+    public static int maxMeetings2(int start[], int end[], int n) {
+        // add your code here
+        int[][] intervals = new int[n][2];
+
+        for(int i = 0; i < n; i++){
+            intervals[i][0] = start[i];
+            intervals[i][1] = end[i];
+        }
+
+        Arrays.sort(intervals, (a,b) -> a[1] - b[1]);
+
+        int meetingsCount = 0;
+        int endTime = -1;
+        for(int[] interval : intervals){
+            if(endTime > interval[0]) continue;
+
+            endTime = interval[1];
             meetingsCount += 1;
         }
         return meetingsCount;
@@ -58,5 +80,12 @@ The meetings are - (1, 2),(3, 4), (5,7) and (8,9)
 
 Sort on start time will not work -> Ex : (1,10) (2,4) (5,7) (8,9).
 Sort on short time intervals will not work : (5,6) (2,4) (4,6)
+
+
+
+Approach 2 failed at this test case :
+N = 47
+Start times : 86 32 31 98 37 65 98 71 99 58 59 32 52 69 15 75 4 86 57 36 83 18 58 50 43 29 98 53 80 5 89 73 8 97 17 100 9 21 55 55 32 74 60 32 87 72 54
+End times : 126 112 134 138 89 118 107 124 126 83 133 64 124 109 108 132 111 95 82 106 86 118 82 78 92 55 128 121 118 95 94 110 111 146 124 148 95 146 109 61 93 126 74 76 110 78 91
 
  */

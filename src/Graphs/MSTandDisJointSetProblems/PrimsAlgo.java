@@ -63,7 +63,6 @@ public class PrimsAlgo {
 /*
 
 Prims Algo :
-
 step1 : Start traverse from any node, add node and distance or weight to Priority Queue.
 step2 : poll pair, make node visited, add all neighbours to PQ.
 step3 : repeat step2 until queue gets empty.

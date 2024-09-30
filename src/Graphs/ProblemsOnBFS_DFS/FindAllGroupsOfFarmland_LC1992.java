@@ -7,9 +7,9 @@ import java.util.List;
 public class FindAllGroupsOfFarmland_LC1992 {
     public static void main(String[] args) {
         int[][] land = {
-                {1,0,0},
-                {0,1,1},
-                {0,1,1}
+                {1,0,0,0},
+                {0,1,1,1},
+                {0,1,1,1}
         };
 
         int[][] res = findFarmland(land);

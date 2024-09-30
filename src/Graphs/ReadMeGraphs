@@ -1,0 +1,35 @@
+Minimum spanning tree(MST) :
+-> MST means generate a graph from given connected graph, such that all nodes in graph should be
+   Connected and sum of weight all selected edges should be minimum.
+-> Generated graph will have N nodes and N-1 edges, MST graph doesn't have cycle in it.
+-> There are two algo's out there to find MST of graph.
+
+Kruskal's Algorithm :
+-> Sort all edges on weight of the edge in non descending order.
+-> Take each edge one by one, And check weather chosen edge form cycle or not. If edge forms cycle
+   then don't take that edge.
+-> Use DSU to check cycle.
+-> TC - O(E log E) SC - O(E+V)
+
+Prim's Algo :
+-> Use priority queue to poll edge which has min weight.
+-> Start from any node, add all adjacent nodes to priority queue except visited nodes.
+-> When poll node from PQ, make it as visited.
+-> Repeat this process until PQ gets empty.
+-> TC - O(E log E) SC - O(E+V)
+
+Dijkstra Algo :
+-> Dijkstra algo is used to find shortest path from source node to all nodes.
+-> We use BFS traversal to find this. First add distance 0 and source node to queue.
+-> Take an array to keep track of min distance to reach a node, Initially all are assigned to infinity means
+   They are not yet visited.
+-> Take pair from queue, calculate distance to reach neighbour, if distance is less than previous reachable distance,
+   then update distance and add to queue.
+-> It can be done without using priority queue. PQ helps to fetch min distance first for example to reach 14 node
+   there were two pairs in queue like 20,14 and 10,14. First we get 20,14 pair and we calculate dist to all
+   adjacent nodes with distance 20. Again we get pair 10,14 then again calculate distance, this time we get
+   min distance for sure, so will update distance array again. Instead of this If we can fetch min distance
+   pair first, max distance pair next then we update distance array only once.
+-> This is how PQ helps.
+-> If we use PQ then TC - O(E log E) no.of edges added to PQ.
+-> Without PQ, TC - O(V+E) Simple BFS traversal.

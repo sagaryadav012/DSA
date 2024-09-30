@@ -45,4 +45,10 @@ Input 2: A = [30,47,19,23], Output: 4
  Count of an element neither max nor min = total no.of sub arrays it exists -
                                            (no.of sub array it acts as max + no.of sub arrays it acts as min - 1(for common 1sized array)
 
+    x = total no.of occurrence of each element in array.
+    y = no.of occurrences of element which acts as min.
+    z = no.of occurrences of element which acts as max.
+
+    result = x - (y + z - 1) // Here -1 is to remove duplicates like {19} in this sub array, 19 acts as max as well as min.
+    So remove one occurrence.
  */

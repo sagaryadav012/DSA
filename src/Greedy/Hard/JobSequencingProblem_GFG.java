@@ -67,7 +67,7 @@ Approach 2 :
 -> Every job has deadline, Do job on the last deadline, for example if deadline is 6, perform job on 6th day or 6th unit of time.
 -> If we do like that in the remaining days, we can do other jobs which has max profit and ends soon.
    for examples job = { [1,4,100] [2,1,50]} If we perform job id1 has deadline 4, it takes one unit of time.
-   And we completed one unit, and we can't job id 2 since it expires at 1 deadline. so perform job on last day.
+   And we completed one unit, and we can't do job id 2 since it expires at 1 deadline. so perform job on last day.
 -> So sort all jobs on profit, and find max time available. Take an array of length max time + 1 to keep
    track of which slots are available.
 -> We can take boolean array to check slot available or not. But If take an int array we can keep track of

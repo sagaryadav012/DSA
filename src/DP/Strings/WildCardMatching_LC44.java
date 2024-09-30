@@ -20,7 +20,7 @@ public class WildCardMatching_LC44 {
     public static boolean isMatch1(int i, int j, String s, String p) {
         // when p exhausted and chars in s still left means they are not matching.
         if(i >= 0 && j < 0) return false;
-        // when s exhausted and chars in p still left, check all are start if all are stars they can match with empty so return true;
+        // when s exhausted and chars in p still left, check all are stars if all are stars they can match with empty so return true;
         if(i < 0 && j >= 0) return checkAllAreStars(p, j);
         // when p and s are exhausted means both are matching.
         if(i < 0 && j < 0) return true;
